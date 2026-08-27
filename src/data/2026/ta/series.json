@@ -1,0 +1,39 @@
+[
+  {
+    "id": "331758",
+    "title": "Bigg Boss The Common Man",
+    "language": "ta",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-08-16",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bQDWORa2JTBawIStjMLzOJIMcPN.jpg",
+    "genres": [
+      "Reality"
+    ],
+    "synopsis": "From ordinary lives to extraordinary drama. Aspiring contestants fight to earn a spot in the Bigg Boss house.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "2c-E2i6CTjQ"
+  },
+  {
+    "id": "331750",
+    "title": "The Court",
+    "language": "ta",
+    "releaseType": "OTT",
+    "platform": "JioCinema",
+    "releaseDate": "2026-09-04",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/iXUtd6fpt15vMZSO6du1uXQjcmv.jpg",
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "synopsis": "A brilliant young lawyer with a stammer stands against her celebrated father in her fight for justice.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "vR2dWPVr63A"
+  }
+]

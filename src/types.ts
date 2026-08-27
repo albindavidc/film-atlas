@@ -1,5 +1,5 @@
 export type LanguageCode = 'ml' | 'ta' | 'te' | 'kn' | 'hi' | 'en';
-export type ReleaseType = 'OTT' | 'Streaming';
+export type ReleaseType = 'OTT' | 'In Theaters';
 export type Status = 'Released' | 'Upcoming';
 export type Platform = 'Netflix' | 'Prime Video' | 'Disney+ Hotstar' | 'SonyLIV' | 'ZEE5' | 'Aha' | 'Sun NXT' | 'JioCinema' | 'Apple TV+';
 
@@ -27,4 +27,5 @@ export interface Movie {
   status: Status;
   certification?: string; // e.g., U/A 13+, A
   mediaType?: 'movie' | 'tv';
+  trailerKey?: string;
 }

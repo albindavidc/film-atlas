@@ -1,0 +1,57 @@
+[
+  {
+    "id": "329919",
+    "title": "Objection, My Lord!",
+    "language": "te",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-07-31",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4y31wXrHWbcFTI3BGbctZUc71tb.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "A father burns himself alive outside the Hyderabad High Court, demanding justice for his missing daughter, Sameera. When the system moves on and forgets, one question remains.Did Sameera ever exist? A forgotten lawyer, Parshuram, is forced out of self imposed exile to fight for the answer.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "Fhr9JdlLRwY"
+  },
+  {
+    "id": "332925",
+    "title": "Azadi 501",
+    "language": "te",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-07-29",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n87o9RG8kpCrIPRLbxXi6HwDFUm.jpg",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "A dramatization of one of India's largest tech scams, where millions of buyers were deceived by the promise of an impossibly cheap phone, leading to a nationwide fraud.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "tv",
+    "trailerKey": "pNEG8nCVEhE"
+  },
+  {
+    "id": "316970",
+    "title": "Jagamae Sangeetham",
+    "language": "te",
+    "releaseType": "OTT",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-04",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "Set in Vaikuntapuram, a sacred temple town nestled between the banks of the Godavari and the neon lights of pop stardom, a disciplined heir to a musical throne and a fame-weary singer strike a forbidden chord. To protect a century of heritage, they must navigate a landscape of family secrets, masked identities, and the heavy price of finding their own voices.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "tbiXRFXVuMs"
+  }
+]

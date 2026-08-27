@@ -1,0 +1,54 @@
+[
+  {
+    "id": "331722",
+    "title": "Bigg Boss : Agnipareeksha",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "JioCinema",
+    "releaseDate": "2026-08-15",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1GboWZREUaFkx11V4DtkLpQsiOs.jpg",
+    "genres": [
+      "Reality"
+    ],
+    "synopsis": "The journey to Bigg Boss Malayalam 8 begins in Agnipareeksha, where commoner contestants battle for a place in the Bigg Boss House.",
+    "rating": 6,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "tv",
+    "trailerKey": "c1-Q-ejJ6h8"
+  },
+  {
+    "id": "331247",
+    "title": "Old Monk: Rumance Theory",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-08-07",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f9IokX0ARFDD6lvbpTC7UA6WR1i.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "synopsis": "After Jathin accidentally dirties Isha’s shoe, a small incident sets off a chain of events that unexpectedly affects both their lives. Without knowing what’s happening to each other, they slowly find themselves connected in ways they never expected.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A 13+",
+    "mediaType": "tv",
+    "trailerKey": "j_tBg92OJrU"
+  },
+  {
+    "id": "332061",
+    "title": "Prince of Mollywood",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-09-11",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bOQC1qVZSmvPtHDZWo7i9NMhpIv.jpg",
+    "genres": [],
+    "synopsis": "No synopsis available.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "iKNslzaNUi0"
+  }
+]

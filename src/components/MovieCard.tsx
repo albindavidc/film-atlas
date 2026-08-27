@@ -1,12 +1,14 @@
 import React from 'react';
 import { Movie, LANGUAGE_MAP } from '../types';
-import { Star } from 'lucide-react';
+import { Star, PlayCircle } from 'lucide-react';
 
 interface MovieCardProps {
   movie: Movie;
+  hidePlatform?: boolean;
+  onClick?: (movie: Movie) => void;
 }
 
-export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+export const MovieCard: React.FC<MovieCardProps> = ({ movie, hidePlatform, onClick }) => {
   const getPlatformTextColor = (platform: string) => {
     const p = platform.toLowerCase();
     if (p.includes('netflix')) return 'text-red-500';
@@ -37,7 +39,10 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   };
 
   return (
-    <div className="group relative aspect-[2/3] bg-slate-800 rounded-lg overflow-hidden border border-white/5 transition-transform hover:scale-[1.02]">
+    <div 
+      onClick={() => onClick && onClick(movie)}
+      className="group relative aspect-[2/3] bg-slate-800 rounded-lg overflow-hidden border border-white/5 transition-transform hover:scale-[1.02] cursor-pointer"
+    >
       {/* Poster */}
       <img
         src={movie.posterUrl}
@@ -47,7 +52,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        {movie.trailerKey && (
+          <PlayCircle className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-xl" />
+        )}
+      </div>
       
       {/* Top Left Badges */}
       <div className="absolute top-3 left-3 flex gap-1 z-10 flex-wrap max-w-[70%]">
@@ -78,9 +87,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 
       {/* Bottom Info */}
       <div className="absolute bottom-4 left-4 right-4 z-10">
-        <p className={`text-[10px] ${getPlatformTextColor(movie.platform)} font-black uppercase mb-1 drop-shadow-md tracking-wider`}>
-          {movie.platform}
-        </p>
+        {!hidePlatform && (
+          <p className={`text-[10px] ${getPlatformTextColor(movie.platform)} font-black uppercase mb-1 drop-shadow-md tracking-wider`}>
+            {movie.platform}
+          </p>
+        )}
         <h3 className="text-sm font-semibold text-white leading-tight drop-shadow-lg mb-1 line-clamp-2">
           {movie.title}
         </h3>

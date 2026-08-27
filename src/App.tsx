@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { MovieCard } from './components/MovieCard';
 import { LanguageCode, ReleaseType, Platform, LANGUAGE_MAP, Movie } from './types';
 import { Menu, X, Loader2, Calendar } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 type TimeView = 'Current Month' | 'Upcoming' | 'Custom';
 type SortOption = 'date-desc' | 'date-asc' | 'alpha' | 'rating';
@@ -28,7 +29,7 @@ import { fetchMovies } from './lib/api';
 
 export default function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [activeTab, setActiveTab] = useState<ReleaseType>('Streaming');
+  const [activeTab, setActiveTab] = useState<ReleaseType>('In Theaters');
   const [timeView, setTimeView] = useState<TimeView>('Current Month');
   
   const [selectedLanguages, setSelectedLanguages] = useState<Set<LanguageCode>>(
@@ -43,6 +44,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [startDate, setStartDate] = useState<string>(INITIAL_DATES.start);
   const [endDate, setEndDate] = useState<string>(INITIAL_DATES.end);
+  const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
   // Fetch from the TMDB API directly on the client
   useEffect(() => {
@@ -172,7 +174,7 @@ export default function App() {
         
         <div className="p-6 border-b border-white/5 hidden lg:block shrink-0">
           <h1 className="text-2xl font-serif italic text-white tracking-tight">Film Atlas</h1>
-          <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 mt-1">OTT & Streaming Tracker</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 mt-1">OTT & Theatrical Tracker</p>
         </div>
         
         <div className="flex-1 p-6 space-y-8 overflow-y-auto custom-scrollbar">
@@ -315,7 +317,7 @@ export default function App() {
             
             {/* Tabs */}
             <div className="flex gap-6 sm:gap-8 overflow-x-auto no-scrollbar shrink-0">
-              {(['OTT', 'Streaming'] as ReleaseType[]).map(type => (
+              {(['OTT', 'In Theaters'] as ReleaseType[]).map(type => (
                 <button
                   key={type}
                   onClick={() => setActiveTab(type)}
@@ -325,7 +327,7 @@ export default function App() {
                       : 'text-slate-500 border-b-2 border-transparent hover:text-slate-300'
                   }`}
                 >
-                  {type === 'OTT' ? 'OTT Releases' : 'Streaming'}
+                  {type === 'OTT' ? 'OTT Releases' : 'In Theaters'}
                 </button>
               ))}
             </div>
@@ -380,7 +382,7 @@ export default function App() {
           ) : filteredMovies.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 content-start">
               {filteredMovies.map(movie => (
-                <MovieCard key={movie.id} movie={movie} />
+                <MovieCard key={movie.id} movie={movie} hidePlatform={activeTab === 'In Theaters'} onClick={(m) => setSelectedMovie(m)} />
               ))}
             </div>
           ) : (
@@ -406,6 +408,55 @@ export default function App() {
           )}
         </div>
       </main>
+
+      {/* Trailer Modal */}
+      <AnimatePresence>
+        {selectedMovie && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedMovie(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative w-full max-w-4xl bg-slate-900 rounded-xl overflow-hidden shadow-2xl border border-white/10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedMovie(null)}
+                className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/80 rounded-full text-white transition-colors backdrop-blur-md"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              
+              {selectedMovie.trailerKey ? (
+                <div className="relative aspect-video w-full bg-black">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${selectedMovie.trailerKey}?autoplay=1&modestbranding=1&rel=0`}
+                    title={`${selectedMovie.title} Trailer`}
+                    className="absolute inset-0 w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center aspect-video w-full bg-slate-800 text-slate-400">
+                  <p className="text-lg">Trailer not available</p>
+                </div>
+              )}
+              
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-white mb-2">{selectedMovie.title}</h2>
+                <p className="text-sm text-slate-400">{selectedMovie.synopsis}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
