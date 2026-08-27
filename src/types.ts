@@ -18,11 +18,13 @@ export interface Movie {
   transliteratedTitle?: string;
   language: LanguageCode;
   releaseType: ReleaseType;
-  platform: Platform;
+  platform: Platform | string;
   releaseDate: string; // YYYY-MM-DD
   posterUrl: string;
   genres: string[];
   synopsis: string;
   rating?: number; // Out of 10
   status: Status;
+  certification?: string; // e.g., U/A 13+, A
+  mediaType?: 'movie' | 'tv';
 }
