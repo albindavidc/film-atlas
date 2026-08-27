@@ -24,6 +24,8 @@ const getInitialDates = () => {
 
 const INITIAL_DATES = getInitialDates();
 
+import { fetchMovies } from './lib/api';
+
 export default function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [activeTab, setActiveTab] = useState<ReleaseType>('Streaming');
@@ -42,10 +44,9 @@ export default function App() {
   const [startDate, setStartDate] = useState<string>(INITIAL_DATES.start);
   const [endDate, setEndDate] = useState<string>(INITIAL_DATES.end);
 
-  // Fetch from the backend API
+  // Fetch from the TMDB API directly on the client
   useEffect(() => {
-    fetch('/api/movies')
-      .then(res => res.json())
+    fetchMovies()
       .then(data => {
         setMovies(data);
         setIsLoading(false);

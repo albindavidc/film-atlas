@@ -37,40 +37,41 @@ async function startServer() {
       const nextMonthDate = new Date(today.getFullYear(), today.getMonth() + 2, 0);
       const endOfNextMonth = nextMonthDate.toISOString().split('T')[0];
 
-      // Fetch Indian languages, sorted by popularity, within the date range
+      // Fetch Indian languages within the date range
+      // To ensure equal representation, we fetch explicitly for each language
+      const targetLanguages = ['ml', 'ta', 'te', 'kn', 'hi', 'en'];
       let allResults: any[] = [];
       
-      // 1. Fetch Movies (3 pages)
-      for (let page = 1; page <= 3; page++) {
-        const discoverUrl = `https://api.themoviedb.org/3/discover/movie?region=IN&with_original_language=ml|ta|te|kn|hi|en&primary_release_date.gte=${startOfYear}&primary_release_date.lte=${endOfNextMonth}&sort_by=popularity.desc&page=${page}`;
+      await Promise.all(targetLanguages.map(async (lang) => {
+        // 1. Fetch Top Movies for this language (Page 1)
+        const discoverUrl = `https://api.themoviedb.org/3/discover/movie?region=IN&with_original_language=${lang}&primary_release_date.gte=${startOfYear}&primary_release_date.lte=${endOfNextMonth}&sort_by=popularity.desc&page=1`;
         const discoverRes = await fetch(discoverUrl, {
           headers: { 'Authorization': `Bearer ${token}`, 'accept': 'application/json' }
         });
         
         if (discoverRes.ok) {
           const discoverData = await discoverRes.json();
-          const movies = (discoverData.results || []).map((m: any) => ({ ...m, media_type: 'movie' }));
-          allResults = [...allResults, ...movies];
+          // Take top 8 movies per language
+          const movies = (discoverData.results || []).slice(0, 8).map((m: any) => ({ ...m, media_type: 'movie' }));
+          allResults.push(...movies);
         }
-      }
 
-      // 2. Fetch TV Shows (3 pages)
-      for (let page = 1; page <= 3; page++) {
-        const tvUrl = `https://api.themoviedb.org/3/discover/tv?with_original_language=ml|ta|te|kn|hi|en&first_air_date.gte=${startOfYear}&first_air_date.lte=${endOfNextMonth}&sort_by=popularity.desc&page=${page}`;
+        // 2. Fetch Top TV Shows for this language (Page 1)
+        const tvUrl = `https://api.themoviedb.org/3/discover/tv?with_original_language=${lang}&first_air_date.gte=${startOfYear}&first_air_date.lte=${endOfNextMonth}&sort_by=popularity.desc&page=1`;
         const tvRes = await fetch(tvUrl, {
           headers: { 'Authorization': `Bearer ${token}`, 'accept': 'application/json' }
         });
         
         if (tvRes.ok) {
           const tvData = await tvRes.json();
-          const tvShows = (tvData.results || []).map((m: any) => ({ ...m, media_type: 'tv' }));
-          allResults = [...allResults, ...tvShows];
+          // Take top 4 TV shows per language
+          const tvShows = (tvData.results || []).slice(0, 4).map((m: any) => ({ ...m, media_type: 'tv' }));
+          allResults.push(...tvShows);
         }
-      }
+      }));
       
-      // Sort combined results by popularity and limit to top 60
-      allResults.sort((a, b) => b.popularity - a.popularity);
-      const results = allResults.slice(0, 60);
+      // We now have exactly ~72 results (12 per language)
+      const results = allResults;
 
       // Fetch detailed release dates and watch providers for each movie/show in parallel
       const detailedMovies = await Promise.all(results.map(async (m: any) => {
