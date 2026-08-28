@@ -180,7 +180,21 @@ export default function App() {
         <div className="flex-1 p-6 space-y-8 overflow-y-auto custom-scrollbar">
           {/* Languages */}
           <div>
-            <label className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 block mb-4">Languages</label>
+            <div className="flex items-center justify-between mb-4">
+              <label className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 block">Languages</label>
+              <button
+                onClick={() => {
+                  if (selectedLanguages.size === 0) {
+                    setSelectedLanguages(new Set(Object.keys(LANGUAGE_MAP) as LanguageCode[]));
+                  } else {
+                    setSelectedLanguages(new Set());
+                  }
+                }}
+                className="text-[10px] text-indigo-400 hover:text-indigo-300 font-medium uppercase tracking-wider transition-colors"
+              >
+                {selectedLanguages.size === 0 ? 'Select All' : 'Clear All'}
+              </button>
+            </div>
             <div className="flex flex-col gap-1.5">
               {(Object.entries(LANGUAGE_MAP) as [LanguageCode, string][]).map(([code, name]) => (
                 <label key={code} className="flex items-center gap-3 cursor-pointer group bg-[#16161D] border border-white/5 rounded-md px-3 py-2 hover:bg-[#1A1A24] transition-colors">
