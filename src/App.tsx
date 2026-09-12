@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { MovieCard } from './components/MovieCard';
 import { LanguageCode, ReleaseType, Platform, LANGUAGE_MAP, Movie } from './types';
-import { Menu, X, Loader2, Calendar } from 'lucide-react';
+import { Menu, X, Loader2, Calendar, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 type TimeView = 'Current Month' | 'Upcoming' | 'Custom';
@@ -45,6 +45,7 @@ export default function App() {
   const [startDate, setStartDate] = useState<string>(INITIAL_DATES.start);
   const [endDate, setEndDate] = useState<string>(INITIAL_DATES.end);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Fetch from the TMDB API directly on the client
   useEffect(() => {
@@ -135,6 +136,15 @@ export default function App() {
         if (!hasMatchingGenre) return false;
       }
 
+      // 5. Search filter
+      if (searchQuery.trim() !== '') {
+        const lowerQuery = searchQuery.toLowerCase();
+        if (!movie.title.toLowerCase().includes(lowerQuery) &&
+            !movie.synopsis.toLowerCase().includes(lowerQuery)) {
+          return false;
+        }
+      }
+
       return true;
     }).sort((a, b) => {
       // 5. Sort logic
@@ -156,7 +166,7 @@ export default function App() {
           return 0;
       }
     });
-  }, [movies, activeTab, timeView, selectedLanguages, selectedPlatforms, selectedGenres, sortBy, thirtyDaysAgo, today]);
+  }, [movies, activeTab, timeView, selectedLanguages, selectedPlatforms, selectedGenres, sortBy, thirtyDaysAgo, today, searchQuery]);
 
   return (
     <div className="h-screen w-full bg-[#0A0A0C] text-slate-200 flex flex-col lg:flex-row overflow-hidden font-sans selection:bg-indigo-500/30">
@@ -348,6 +358,21 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-4 flex-wrap sm:flex-nowrap">
+            
+            {/* Search Bar */}
+            <div className="relative group flex-1 sm:flex-none">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-500 group-focus-within:text-indigo-400 transition-colors">
+                <Search className="w-4 h-4" />
+              </div>
+              <input 
+                type="text" 
+                placeholder="Search movies..." 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full sm:w-64 bg-[#16161D] border border-white/10 rounded-lg pl-9 pr-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition-all"
+              />
+            </div>
+
             {/* Sub-tabs */}
             <div className="flex bg-white/5 p-1 rounded-lg border border-white/10 shrink-0">
               {(['Current Month', 'Upcoming', 'Custom'] as TimeView[]).map(view => (
