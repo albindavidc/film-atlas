@@ -1,0 +1,78 @@
+[
+  {
+    "id": "284753",
+    "title": "Operation Safed Sagar: The Untold Story of the Kargil War",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-08-07",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f56PHAGbUFPmHMRippWWNpRgSao.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "As the Kargil War erupts between India and Pakistan, the Golden Arrows squadron of the Air Force takes flight on a dangerous mission behind enemy lines.",
+    "rating": 6.7,
+    "status": "Released",
+    "certification": "TV-MA",
+    "mediaType": "tv",
+    "trailerKey": "vqV3xfeb4SQ"
+  },
+  {
+    "id": "332299",
+    "title": "Clean Up Company",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-08-21",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sVMcco0EdfDvFpyPlHU9n6RPrQj.jpg",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "3 boys stumble upon an opportunity to make easy money by getting rid of dead bodies in a small city marred by gang wars. Things quickly take a turn for the worse and they end up neck deep in trouble fighting to survive.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "A",
+    "mediaType": "tv",
+    "trailerKey": "llpl-JJPEAI"
+  },
+  {
+    "id": "mock-tv-hi-1789220897228",
+    "title": "Mirzapur Season 08",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-08-21",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Action",
+      "Action"
+    ],
+    "synopsis": "A highly anticipated upcoming hi tv releasing in month 08 2026.",
+    "rating": 8.952117361834981,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-tv-hi-1789220897229",
+    "title": "Mirzapur Season 08",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-08-10",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "synopsis": "A highly anticipated upcoming hi tv releasing in month 08 2026.",
+    "rating": 8.880623096178045,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1709391",
+    "title": "Hanuman Ansh",
+    "language": "hi",
+    "releaseType": "In Theaters",
+    "platform": "Aha",
+    "releaseDate": "2026-08-07",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/as2Y3zGUa2IUS3uAx2sh6Ano3es.jpg",
+    "genres": [
+      "Family",
+      "Drama"
+    ],
+    "synopsis": "A grieving boy seeks God to meet his departed mother, and in finding the divine, learns to serve humanity with miracles of love, food and silent blessings, becoming Hanuman Ansh, Neem Karoli Baba.",
+    "rating": 8.6,
+    "status": "Released",
+    "certification": "U",
+    "mediaType": "movie",
+    "trailerKey": "YpGhCA2X3gU"
+  },
+  {
+    "id": "1444466",
+    "title": "Awarapan 2",
+    "language": "hi",
+    "releaseType": "In Theaters",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-08-14",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lD3J6zTbWkVtPYuSUuuBwpuKMCO.jpg",
+    "genres": [
+      "Action",
+      "Drama",
+      "Romance"
+    ],
+    "synopsis": "Shivam returns to the crime world, where his path forward demands redemption, love, and sacrifice. As relationships deepen and conflicts intensify, every choice tests his resolve and shapes his destiny.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "movie",
+    "trailerKey": "IQ7HkZ-Gun8"
+  },
+  {
+    "id": "mock-movie-hi-1789220897225",
+    "title": "Singham Returns 08",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-08-26",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama",
+      "Drama"
+    ],
+    "synopsis": "A highly anticipated upcoming hi movie releasing in month 08 2026.",
+    "rating": 8.53319733718109,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-hi-1789220897226",
+    "title": "Singham Returns 08",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "ZEE5",
+    "releaseDate": "2026-08-17",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Comedy"
+    ],
+    "synopsis": "A highly anticipated upcoming hi movie releasing in month 08 2026.",
+    "rating": 8.85709706980673,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

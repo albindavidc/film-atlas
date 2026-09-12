@@ -11,12 +11,18 @@ export async function fetchMovies(): Promise<Movie[]> {
   const modules = import.meta.glob('../data/**/*.json', { eager: true });
   
   const allMovies: Movie[] = [];
-  
+  const seenIds = new Set<string>();
+
   for (const path in modules) {
     const data = (modules[path] as any).default as any[];
     if (Array.isArray(data)) {
-      // Validate and push
-      allMovies.push(...data);
+      // Validate and push, preventing duplicates
+      for (const item of data) {
+        if (!seenIds.has(item.id)) {
+          seenIds.add(item.id);
+          allMovies.push(item);
+        }
+      }
     }
   }
 

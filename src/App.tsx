@@ -9,9 +9,8 @@ type SortOption = 'date-desc' | 'date-asc' | 'alpha' | 'rating';
 
 const getInitialDates = () => {
   const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const thirtyDaysAgo = new Date(today);
-  thirtyDaysAgo.setDate(today.getDate() - 30);
+  const firstDay = new Date(now.getFullYear(), now.getMonth(), 1);
+  const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0);
   
   const formatDate = (d: Date) => {
     const y = d.getFullYear();
@@ -20,7 +19,7 @@ const getInitialDates = () => {
     return `${y}-${m}-${dStr}`;
   };
   
-  return { start: formatDate(thirtyDaysAgo), end: formatDate(today) };
+  return { start: formatDate(firstDay), end: formatDate(lastDay), firstDay, lastDay };
 };
 
 const INITIAL_DATES = getInitialDates();
@@ -100,8 +99,8 @@ export default function App() {
   // Determine the rolling 30-day window
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const thirtyDaysAgo = new Date(today);
-  thirtyDaysAgo.setDate(today.getDate() - 30);
+  const currentMonthStart = INITIAL_DATES.firstDay;
+  const currentMonthEnd = INITIAL_DATES.lastDay;
   
   const formatDateWindow = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
@@ -117,8 +116,8 @@ export default function App() {
       // 3. Filter by Time View
       if (timeView === 'Current Month') {
         if (movie.status !== 'Released') return false;
-        // Last 30 days roughly
-        if (releaseDate < thirtyDaysAgo || releaseDate > today) return false;
+        // Current calendar month
+        if (releaseDate < currentMonthStart || releaseDate > currentMonthEnd) return false;
       } else if (timeView === 'Custom') {
         if (startDate && releaseDate < new Date(startDate)) return false;
         if (endDate && releaseDate > new Date(endDate)) return false;
@@ -166,7 +165,7 @@ export default function App() {
           return 0;
       }
     });
-  }, [movies, activeTab, timeView, selectedLanguages, selectedPlatforms, selectedGenres, sortBy, thirtyDaysAgo, today, searchQuery]);
+  }, [movies, activeTab, timeView, selectedLanguages, selectedPlatforms, selectedGenres, sortBy, currentMonthStart, currentMonthEnd, searchQuery]);
 
   return (
     <div className="h-screen w-full bg-[#0A0A0C] text-slate-200 flex flex-col lg:flex-row overflow-hidden font-sans selection:bg-indigo-500/30">
@@ -212,7 +211,7 @@ export default function App() {
                     type="checkbox"
                     className="sr-only"
                     checked={selectedLanguages.has(code)}
-                    onChange={() => toggleLanguage(code)}
+                    onChange={() => toggleLanguage(code as LanguageCode)}
                   />
                   <div className={`w-4 h-4 rounded-sm border flex items-center justify-center shrink-0 transition-colors ${selectedLanguages.has(code) ? 'bg-amber-400 border-amber-400' : 'border-white/20 bg-white/5'}`}>
                     <svg className={`w-3 h-3 text-black pointer-events-none ${selectedLanguages.has(code) ? 'block' : 'hidden'}`} viewBox="0 0 14 14" fill="none">
@@ -296,23 +295,19 @@ export default function App() {
                 <Calendar className="w-3.5 h-3.5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
               </div>
               <input 
-                type="date" 
-                value={startDate}
-                onChange={(e) => { setStartDate(e.target.value); setTimeView('Custom'); }}
-                className="w-full bg-[#16161D] border border-white/10 rounded-md pl-9 pr-3 py-2 text-xs text-white [color-scheme:dark] focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all cursor-pointer hover:bg-[#1A1A24]"
-                placeholder="From"
-              />
-            </div>
-            <div className="relative group">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <Calendar className="w-3.5 h-3.5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
-              </div>
-              <input 
-                type="date" 
-                value={endDate}
-                onChange={(e) => { setEndDate(e.target.value); setTimeView('Custom'); }}
-                className="w-full bg-[#16161D] border border-white/10 rounded-md pl-9 pr-3 py-2 text-xs text-white [color-scheme:dark] focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all cursor-pointer hover:bg-[#1A1A24]"
-                placeholder="To"
+                type="month" 
+                value={startDate.substring(0, 7)}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (!val) return;
+                  const [y, m] = val.split('-');
+                  const lastDay = new Date(Number(y), Number(m), 0);
+                  const pad = (n: number) => String(n).padStart(2, '0');
+                  setStartDate(`${y}-${pad(Number(m))}-01`);
+                  setEndDate(`${y}-${pad(Number(m))}-${pad(lastDay.getDate())}`);
+                  setTimeView('Custom');
+                }}
+                className="w-full bg-[#16161D] border border-white/10 rounded-md pl-9 pr-3 py-2 text-xs text-white [color-scheme:dark] focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all cursor-pointer hover:bg-[#1A1A24] font-medium tracking-wide"
               />
             </div>
           </div>
@@ -431,7 +426,7 @@ export default function App() {
               </div>
               <h3 className="text-sm font-semibold text-white mb-1">No matches found</h3>
               <p className="text-[11px] text-slate-400 max-w-xs mb-4">
-                Try adjusting your language, platform, or genre filters to find more releases.
+                Try adjusting your language, platform or genre filters to find more releases.
               </p>
               <button 
                 onClick={() => {

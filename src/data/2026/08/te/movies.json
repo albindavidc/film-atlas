@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1441228",
+    "title": "Irumudi",
+    "language": "te",
+    "releaseType": "In Theaters",
+    "platform": "Aha",
+    "releaseDate": "2026-08-20",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sPePQmJRKkB14sGjB7zBkLJkaTW.jpg",
+    "genres": [
+      "Drama",
+      "Family",
+      "Action"
+    ],
+    "synopsis": "An alcoholic with a violent past—living peacefully with his daughter beside a waterfall—decides to take Ayyappa Deeksha (a 41-day spiritual vow and period of intense austerity) at her request.",
+    "rating": 6.6,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "movie",
+    "trailerKey": "ajn10l7Oasw"
+  },
+  {
+    "id": "1423253",
+    "title": "Korean Kanakaraju",
+    "language": "te",
+    "releaseType": "In Theaters",
+    "platform": "JioCinema",
+    "releaseDate": "2026-08-06",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vUEb8v8W5ANRXhydogbmjXfRfni.jpg",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Action"
+    ],
+    "synopsis": "Possessed by a Korean spirit, Kanakaraju must navigate his new supernatural identity to protect his family and solve the spirit's murder.",
+    "rating": 7,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "movie",
+    "trailerKey": "kq0X2owCVKw"
+  },
+  {
+    "id": "mock-movie-te-1789220897227",
+    "title": "Pushpa 08",
+    "language": "te",
+    "releaseType": "In Theaters",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-08-22",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Romance",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming te movie releasing in month 08 2026.",
+    "rating": 9.162735078727724,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-te-1789220897228",
+    "title": "Pushpa 08",
+    "language": "te",
+    "releaseType": "In Theaters",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-08-24",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming te movie releasing in month 08 2026.",
+    "rating": 8.549760154599902,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

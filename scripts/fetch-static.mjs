@@ -18,42 +18,38 @@ const getPlatformFallback = (id) => {
 };
 
 const today = new Date();
-const thirtyDaysAgo = new Date();
-thirtyDaysAgo.setDate(today.getDate() - 30);
-const thirtyDaysFuture = new Date();
-thirtyDaysFuture.setDate(today.getDate() + 30);
+const year = today.getFullYear();
+const monthNum = today.getMonth() + 1;
+const month = String(monthNum).padStart(2, '0');
+const lastDay = new Date(year, monthNum, 0).getDate();
 
-const startDateStr = thirtyDaysAgo.toISOString().split('T')[0];
+const startDateStr = `${year}-${month}-01`;
+const endDateStr = `${year}-${month}-${lastDay}`;
 const todayStr = today.toISOString().split('T')[0];
-const endDateStr = thirtyDaysFuture.toISOString().split('T')[0];
 
 const targetLanguages = ['ml', 'ta', 'te', 'kn', 'hi', 'en'];
 const dataDir = path.join(__dirname, '../src/data');
 
+async function fetchPage(url) {
+  const res = await fetch(url, { headers: { 'Authorization': `Bearer ${token}`, 'accept': 'application/json' } });
+  if (!res.ok) return [];
+  const data = await res.json();
+  return data.results || [];
+}
+
 async function processMedia(type, urlSuffix, lang, outFileName) {
-  // Fetch Recent
-  const recentUrl = `https://api.themoviedb.org/3/discover/${type}?region=IN&with_original_language=${lang}&${urlSuffix}.gte=${startDateStr}&${urlSuffix}.lte=${todayStr}&sort_by=popularity.desc&page=1`;
-  const recentRes = await fetch(recentUrl, {
-    headers: { 'Authorization': `Bearer ${token}`, 'accept': 'application/json' }
-  });
-  
-  // Fetch Upcoming
-  const upcomingUrl = `https://api.themoviedb.org/3/discover/${type}?region=IN&with_original_language=${lang}&${urlSuffix}.gte=${todayStr}&${urlSuffix}.lte=${endDateStr}&sort_by=popularity.desc&page=1`;
-  const upcomingRes = await fetch(upcomingUrl, {
-    headers: { 'Authorization': `Bearer ${token}`, 'accept': 'application/json' }
-  });
-  
-  if (!recentRes.ok || !upcomingRes.ok) {
-    console.error(`Failed to fetch ${type} for ${lang}`);
-    return;
-  }
-  
-  const recentData = await recentRes.json();
-  const upcomingData = await upcomingRes.json();
-  
-  const recentResults = (recentData.results || []).slice(0, 10);
-  const upcomingResults = (upcomingData.results || []).slice(0, 10);
-  
+  const p1 = `https://api.themoviedb.org/3/discover/${type}?region=IN&with_spoken_languages=${lang}&${urlSuffix}.gte=${startDateStr}&${urlSuffix}.lte=${endDateStr}&sort_by=popularity.desc&page=1`;
+  const p2 = `https://api.themoviedb.org/3/discover/${type}?region=IN&with_spoken_languages=${lang}&${urlSuffix}.gte=${startDateStr}&${urlSuffix}.lte=${endDateStr}&sort_by=popularity.desc&page=2`;
+  const p3 = `https://api.themoviedb.org/3/discover/${type}?region=IN&with_spoken_languages=${lang}&${urlSuffix}.gte=${startDateStr}&${urlSuffix}.lte=${endDateStr}&sort_by=popularity.desc&page=3`;
+  const p4 = `https://api.themoviedb.org/3/discover/${type}?region=IN&with_spoken_languages=${lang}&${urlSuffix}.gte=${startDateStr}&${urlSuffix}.lte=${endDateStr}&sort_by=popularity.desc&page=4`;
+
+  const [page1, page2, page3, page4] = await Promise.all([
+    fetchPage(p1), fetchPage(p2),
+    fetchPage(p3), fetchPage(p4)
+  ]);
+  const recentResults = [...page1, ...page2];
+  const upcomingResults = [...page3, ...page4];
+
   // Merge and deduplicate by ID
   const allMap = new Map();
   for (const item of [...recentResults, ...upcomingResults]) {
@@ -61,8 +57,12 @@ async function processMedia(type, urlSuffix, lang, outFileName) {
   }
   const results = Array.from(allMap.values());
   
-  // Fetch details
-  const detailed = await Promise.all(results.map(async (m) => {
+  // Process in batches to avoid rate limits
+  const detailed = [];
+  const BATCH_SIZE = 5;
+  for (let i = 0; i < results.length; i += BATCH_SIZE) {
+    const batch = results.slice(i, i + BATCH_SIZE);
+    const batchResults = await Promise.all(batch.map(async (m) => {
     const appendStr = type === 'movie' ? 'release_dates,watch/providers,videos' : 'content_ratings,watch/providers,videos';
     const detailRes = await fetch(`https://api.themoviedb.org/3/${type}/${m.id}?append_to_response=${appendStr}`, { 
       headers: { 'Authorization': `Bearer ${token}`, 'accept': 'application/json' }
@@ -122,6 +122,7 @@ async function processMedia(type, urlSuffix, lang, outFileName) {
     const status = releaseDateObj > today ? "Upcoming" : "Released";
     
     const year = releaseDateObj.getFullYear().toString();
+    const month = String(releaseDateObj.getMonth() + 1).padStart(2, '0');
     
     let trailerKey = undefined;
     if (d.videos && d.videos.results) {
@@ -163,39 +164,62 @@ async function processMedia(type, urlSuffix, lang, outFileName) {
       certification,
       mediaType: type,
       trailerKey,
-      year // for grouping
+      year, // for grouping
+      month
     };
   }));
+  detailed.push(...batchResults);
+}
 
-  // Group by year
-  const byYear = {};
+  // Group by year, month, and language
+  const byYearMonthLang = {};
   for (const item of detailed) {
-    if (!byYear[item.year]) byYear[item.year] = [];
-    byYear[item.year].push(item);
+    // Determine language folder (fallback to 'en' if not in target list)
+    const folderLang = targetLanguages.includes(item.language) ? item.language : 'en';
+    const key = `${item.year}/${item.month}/${folderLang}`;
+    if (!byYearMonthLang[key]) byYearMonthLang[key] = [];
+    byYearMonthLang[key].push(item);
   }
 
   // Write files
-  for (const year of Object.keys(byYear)) {
-    const dir = path.join(dataDir, year, lang);
+  for (const yearMonthLang of Object.keys(byYearMonthLang)) {
+    const dir = path.join(dataDir, yearMonthLang);
     fs.mkdirSync(dir, { recursive: true });
     
-    // Clean year out of the written objects
-    const finalData = byYear[year].map(i => {
+    // Clean year and month out of the written objects
+    const newItems = byYearMonthLang[yearMonthLang].map(i => {
       const copy = { ...i };
       delete copy.year;
+      delete copy.month;
       return copy;
     });
     
-    fs.writeFileSync(path.join(dir, outFileName), JSON.stringify(finalData, null, 2));
-    console.log(`Wrote ${finalData.length} ${outFileName} to ${year}/${lang}`);
+    const filePath = path.join(dir, outFileName);
+    let finalData = [];
+    if (fs.existsSync(filePath)) {
+      try {
+        finalData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      } catch (e) {}
+    }
+    
+    // Merge and deduplicate by ID
+    const idMap = new Map();
+    for (const item of [...finalData, ...newItems]) {
+      idMap.set(item.id, item);
+    }
+    
+    finalData = Array.from(idMap.values());
+    
+    fs.writeFileSync(filePath, JSON.stringify(finalData, null, 2));
+    console.log(`Wrote ${finalData.length} total ${outFileName} to ${yearMonthLang}`);
   }
 }
 
 async function run() {
-  // Clear old data
-  if (fs.existsSync(dataDir)) {
-    fs.rmSync(dataDir, { recursive: true, force: true });
-  }
+  // Clear old data is disabled as requested
+  // if (fs.existsSync(dataDir)) {
+  //   fs.rmSync(dataDir, { recursive: true, force: true });
+  // }
 
   for (const lang of targetLanguages) {
     await processMedia('movie', 'primary_release_date', lang, 'movies.json');

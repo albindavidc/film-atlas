@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1508168",
+    "title": "Bethlehem Kudumba Unit",
+    "language": "ml",
+    "releaseType": "In Theaters",
+    "platform": "ZEE5",
+    "releaseDate": "2026-08-21",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uaSZiH6yoGaVJcqzKtrfSkqDuHX.jpg",
+    "genres": [
+      "Romance",
+      "Comedy",
+      "Drama"
+    ],
+    "synopsis": "Ashley's homecoming from abroad takes an emotional turn when a wedding next door stirs memories of her first love, Justin.",
+    "rating": 8.7,
+    "status": "Released",
+    "certification": "U/A 13+",
+    "mediaType": "movie",
+    "trailerKey": "fk0JHh1P9H0"
+  },
+  {
+    "id": "1036081",
+    "title": "Khalifa: The Ruler",
+    "language": "ml",
+    "releaseType": "In Theaters",
+    "platform": "ZEE5",
+    "releaseDate": "2026-08-20",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cAl7uuRojdxysptYBj9Mg0czGmI.jpg",
+    "genres": [
+      "Crime",
+      "Action"
+    ],
+    "synopsis": "Aamir Ali, a notorious gold smuggling kingpin who inherited his multi-million dollar criminal enterprise from a lineage of gangsters, is drawn into a web of vengeance, legacy and power.",
+    "rating": 7.1,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "movie",
+    "trailerKey": "8NiMCt2o-uQ"
+  },
+  {
+    "id": "mock-movie-ml-1789220897226",
+    "title": "Premam 08",
+    "language": "ml",
+    "releaseType": "In Theaters",
+    "platform": "Netflix",
+    "releaseDate": "2026-08-23",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Romance",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming ml movie releasing in month 08 2026.",
+    "rating": 9.340936609777335,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-ml-1789220897227",
+    "title": "Premam 08",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-08-02",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Drama"
+    ],
+    "synopsis": "A highly anticipated upcoming ml movie releasing in month 08 2026.",
+    "rating": 9.345022822672094,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

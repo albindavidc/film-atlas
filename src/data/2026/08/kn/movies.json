@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1213243",
+    "title": "Toxic: A Fairy Tale for Grown-ups",
+    "language": "kn",
+    "releaseType": "In Theaters",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-08-26",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/oiIPU4lvnI0Ag2K9cyAi44eCaoE.jpg",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "A powerful drug cartel pulls the strings behind a facade of sun-soaked beaches as a gritty, violent underworld power struggle emerges during the crumbling of Portuguese colonial rule.",
+    "rating": 8,
+    "status": "Released",
+    "certification": "A",
+    "mediaType": "movie",
+    "trailerKey": "EfluEyQ5QIA"
+  },
+  {
+    "id": "mock-movie-kn-1789220897228",
+    "title": "KGF Chapter 08",
+    "language": "kn",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-08-23",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "synopsis": "A highly anticipated upcoming kn movie releasing in month 08 2026.",
+    "rating": 8.915125642352553,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-kn-1789220897229",
+    "title": "KGF Chapter 08",
+    "language": "kn",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-08-10",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming kn movie releasing in month 08 2026.",
+    "rating": 8.729264167226109,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]
