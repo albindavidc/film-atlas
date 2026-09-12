@@ -1,21 +1,40 @@
 [
   {
-    "id": "284753",
-    "title": "Operation Safed Sagar: The Untold Story of the Kargil War",
+    "id": "313172",
+    "title": "Chumbak",
     "language": "hi",
     "releaseType": "OTT",
-    "platform": "Netflix",
-    "releaseDate": "2026-08-07",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/f56PHAGbUFPmHMRippWWNpRgSao.jpg",
+    "platform": "JioCinema",
+    "releaseDate": "2026-09-10",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/r2TJ9s9uhfxTssar1gBAWcxIXx7.jpg",
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "synopsis": "Five quirky families navigate life as neighbors in Chumbak Colony, where chaotic conflicts and hilarious antics turn each day into a new chapter.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A 13+",
+    "mediaType": "tv",
+    "trailerKey": "69auJ1F1EsE"
+  },
+  {
+    "id": "249863",
+    "title": "The Revolutionaries",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-09-11",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7oikzZ6QgHsTjZ2JqkmKH1NRS9A.jpg",
     "genres": [
       "Drama"
     ],
-    "synopsis": "As the Kargil War erupts between India and Pakistan, the Golden Arrows squadron of the Air Force takes flight on a dangerous mission behind enemy lines.",
-    "rating": 6.7,
+    "synopsis": "The Revolutionaries narrates the inspiring tale of brave young Indian freedom fighters who fought for ending British Raj with their unwavering spirit and ideology.",
+    "rating": 0,
     "status": "Released",
     "certification": "TV-MA",
     "mediaType": "tv",
-    "trailerKey": "vqV3xfeb4SQ"
+    "trailerKey": "5HkDfG5BhCU"
   },
   {
     "id": "332299",
@@ -24,7 +43,7 @@
     "releaseType": "OTT",
     "platform": "Disney+ Hotstar",
     "releaseDate": "2026-08-21",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/t5HvXT9HYB5R9niBG4y0AMypTfC.jpg",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sVMcco0EdfDvFpyPlHU9n6RPrQj.jpg",
     "genres": [
       "Comedy",
       "Crime",
@@ -36,6 +55,24 @@
     "certification": "A",
     "mediaType": "tv",
     "trailerKey": "llpl-JJPEAI"
+  },
+  {
+    "id": "332022",
+    "title": "Laziness Saves",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-08-14",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vLvc2WDdGlO0iUyXoIBVzrepttg.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "synopsis": "Launched by HDFC Bank, 'Vigil Aunty Says - Laziness Saves', a fraud awareness campaign featuring its Vigil Aunty character alongside seven stand-up comedians.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "CkVpbNWOkU4"
   },
   {
     "id": "328818",
@@ -57,97 +94,57 @@
     "trailerKey": "zNTDyjxeyRE"
   },
   {
-    "id": "329404",
-    "title": "The Legend of Karna",
-    "language": "hi",
-    "releaseType": "OTT",
-    "platform": "Aha",
-    "releaseDate": "2026-07-31",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/jzVP9rqT2YH2nTx3l3csmmU9B1q.jpg",
-    "genres": [
-      "Animation",
-      "Action & Adventure",
-      "Drama"
-    ],
-    "synopsis": "A warrior from the Mahabharata who is born to Kunti and the Sun God Surya but raised in a charioteer’s household. He possesses the gift of bow mastery that rivals the greatest warriors of his age, compelling him to enter a grand tournament usually reserved only for kings and princes, altering the course of an empire forever.",
-    "rating": 0,
-    "status": "Released",
-    "certification": "U/A",
-    "mediaType": "tv",
-    "trailerKey": "LVmH0rgWZb8"
-  },
-  {
-    "id": "328817",
-    "title": "Yeh Fitoor Tera",
+    "id": "333458",
+    "title": "Crime Patrol 2026: Crime Ka Current Season",
     "language": "hi",
     "releaseType": "OTT",
     "platform": "JioCinema",
-    "releaseDate": "2026-08-05",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/26anGsoVCiEbj2yOHSNGOBlR3mD.jpg",
+    "releaseDate": "2026-08-31",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vJGNaikuHhz9nVM3Ta8u6Fy1BjH.jpg",
     "genres": [
+      "Crime",
       "Drama"
     ],
-    "synopsis": "Reclusive Saumya finds the strength to reclaim her life when she meets Jeet, a free-spirited rebel. A passionate love story blooms in the heart of Prayagraj.",
-    "rating": 0,
-    "status": "Released",
-    "certification": "U/A 13+",
-    "mediaType": "tv",
-    "trailerKey": "qt7PUsnJIvI"
-  },
-  {
-    "id": "332022",
-    "title": "Laziness Saves",
-    "language": "hi",
-    "releaseType": "OTT",
-    "platform": "Aha",
-    "releaseDate": "2026-08-14",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vLvc2WDdGlO0iUyXoIBVzrepttg.jpg",
-    "genres": [
-      "Comedy"
-    ],
-    "synopsis": "Launched by HDFC Bank, 'Vigil Aunty Says - Laziness Saves', a fraud awareness campaign featuring its Vigil Aunty character alongside seven stand-up comedians.",
+    "synopsis": "Ajay Devgn joins Crime Patrol 2026 as the new host, bringing real cases and stories that are closer to home than we think.",
     "rating": 0,
     "status": "Released",
     "certification": "U/A",
     "mediaType": "tv",
-    "trailerKey": "WKq3S2vvVEM"
+    "trailerKey": "8JXUpbARhxo"
   },
   {
-    "id": "330394",
-    "title": "Service Girl",
+    "id": "331932",
+    "title": "Ali Baba aur 40 Bhoot",
     "language": "hi",
     "releaseType": "OTT",
-    "platform": "Prime Video",
-    "releaseDate": "2026-07-31",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vy0isKbibsZ9DlDqbz56XzBDZxO.jpg",
+    "platform": "JioCinema",
+    "releaseDate": "2026-09-11",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cYjdacskAhvWdjhxsSdhop1SxON.jpg",
     "genres": [
-      "Drama",
-      "Crime"
+      "Comedy"
     ],
-    "synopsis": "A viral video destroys Divya's world overnight. When everyone she loves rejects her, she decides to fight back. Her search for the truth pulls her into a criminal underworld far more dangerous than she imagined, where every step closer puts her life at greater risk.",
+    "synopsis": "Rooted in logic and science, Alisha is drawn into an experience that defies everything she believes. Will she find answers or uncover a terrifying truth?",
     "rating": 0,
     "status": "Released",
-    "certification": "A",
+    "certification": "U/A",
     "mediaType": "tv",
-    "trailerKey": "HnyuQqbsOHY"
+    "trailerKey": "JgAzXJo-q6g"
   },
   {
-    "id": "330781",
-    "title": "Bhojpuri Bawaal",
+    "id": "332433",
+    "title": "Abhishek is a Mumma's Boy",
     "language": "hi",
     "releaseType": "OTT",
     "platform": "SonyLIV",
-    "releaseDate": "2026-08-02",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/7p9uPUzhe9MzygAjlwH1sRucDNB.jpg",
-    "genres": [
-      "Reality"
-    ],
-    "synopsis": "Welcome to the lively world of Bhojpuri entertainment and culture, featuring some of its biggest names, where the heart is as big as the drama.",
+    "releaseDate": "2026-08-22",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gAE5dSbTnuAdLodFQ2zn0k0Hfx6.jpg",
+    "genres": [],
+    "synopsis": "Every guy thinks he can balance his girlfriend and his mother—until both of them want him to pick a side.",
     "rating": 0,
     "status": "Released",
-    "certification": "U/A 16+",
+    "certification": "U/A",
     "mediaType": "tv",
-    "trailerKey": "YjUwolC-4Ys"
+    "trailerKey": "bNHrhvcN1KA"
   },
   {
     "id": "332403",
@@ -166,59 +163,115 @@
     "status": "Released",
     "certification": "U/A 13+",
     "mediaType": "tv",
-    "trailerKey": "3gczF6WafW0"
+    "trailerKey": "SFrKBnj13qI"
   },
   {
-    "id": "331170",
-    "title": "Hustle 5 - Apna Homeground",
+    "id": "334150",
+    "title": "Jogger's Park",
     "language": "hi",
     "releaseType": "OTT",
-    "platform": "Netflix",
-    "releaseDate": "2026-08-08",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/gK89Bf0x3BeH3QEead3NYWyWv2h.jpg",
+    "platform": "Aha",
+    "releaseDate": "2026-08-28",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
     "genres": [
-      "Reality"
+      "Drama"
     ],
-    "synopsis": "A new season brings India's fiercest rappers, iconic Squad Bosses, and Badshah as judge as they battle for the ultimate rap champion title.",
+    "synopsis": "After her husband leaves her, lonely Niharika finds an unexpected companion in much younger Kabir. Their friendship soon turns into a dangerous attraction. Will Niharika fight for her marriage, or surrender to the man who makes her feel alive again?",
     "rating": 0,
     "status": "Released",
     "certification": "U/A",
     "mediaType": "tv",
-    "trailerKey": "1kVrpYcMCK8"
+    "trailerKey": "mqg48h_uKYM"
   },
   {
-    "id": "313172",
-    "title": "Chumbak",
+    "id": "292117",
+    "title": "Teen Kauwe",
     "language": "hi",
     "releaseType": "OTT",
-    "platform": "JioCinema",
-    "releaseDate": "2026-08-28",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/r2TJ9s9uhfxTssar1gBAWcxIXx7.jpg",
-    "genres": [
-      "Comedy",
-      "Family"
-    ],
-    "synopsis": "Five quirky families navigate life as neighbors in Chumbak Colony, where chaotic conflicts and hilarious antics turn each day into a new chapter.",
-    "rating": 0,
-    "status": "Upcoming",
-    "certification": "U/A 13+",
-    "mediaType": "tv",
-    "trailerKey": "69auJ1F1EsE"
-  },
-  {
-    "id": "249863",
-    "title": "The Revolutionaries",
-    "language": "hi",
-    "releaseType": "OTT",
-    "platform": "Aha",
-    "releaseDate": "2026-09-11",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/5fLyYAxXWP4BxZCBN79NV1eiT4d.jpg",
+    "platform": "Netflix",
+    "releaseDate": "2026-10-02",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2SKWihR6IyMOMAxjD7j9VFI9QNe.jpg",
     "genres": [],
-    "synopsis": "The Revolutionaries narrates the inspiring tale of brave young Indian freedom fighters who fought for ending British Raj with their unwavering spirit and ideology.",
+    "synopsis": "An Out and Out Comedy",
     "rating": 0,
     "status": "Upcoming",
     "certification": "U/A",
     "mediaType": "tv",
-    "trailerKey": "QwGwe6_ZVMQ"
+    "trailerKey": "e6ul5ucrx68"
+  },
+  {
+    "id": "333483",
+    "title": "Hunkkaar: The Roar",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-25",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7tGavtmaMSu0D74uVt48A44mw4h.jpg",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "synopsis": "A victim takes a courageous stand against a powerful godman accused of misconduct in an intense courtroom drama centered on her fight for justice.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "A",
+    "mediaType": "tv",
+    "trailerKey": "k_P_O1zAVug"
+  },
+  {
+    "id": "285147",
+    "title": "Shaque: Trust No One",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-09-24",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama",
+      "Crime",
+      "Mystery"
+    ],
+    "synopsis": "No synopsis available.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "WPPcfRd-JzE"
+  },
+  {
+    "id": "329143",
+    "title": "AndherPura Curse",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-10-09",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nePSgZoiKqxnQFDt8X1DEedeXeH.jpg",
+    "genres": [
+      "Mystery"
+    ],
+    "synopsis": "AndherPura Curse Is a Minecraft Horror Series Presented By SmilyBag!",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A 13+",
+    "mediaType": "tv",
+    "trailerKey": "nKo0_iJF2yc"
+  },
+  {
+    "id": "334326",
+    "title": "Shayad Yahi Hai Pyaar",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "JioCinema",
+    "releaseDate": "2026-09-28",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "Escaping a toxic relationship, 35-year-old Preeti finds love and solace with Aarav. But the age gap stigma follows them everywhere! Can love overpower it all?",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A 13+",
+    "mediaType": "tv",
+    "trailerKey": "2SR7voXjS4A"
   }
 ]

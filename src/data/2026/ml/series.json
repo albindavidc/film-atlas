@@ -1,7 +1,7 @@
 [
   {
     "id": "331722",
-    "title": "Bigg Boss : Agnipareeksha",
+    "title": "Bigg Boss: Agnipareeksha",
     "language": "ml",
     "releaseType": "OTT",
     "platform": "JioCinema",
@@ -18,37 +18,38 @@
     "trailerKey": "c1-Q-ejJ6h8"
   },
   {
-    "id": "331247",
-    "title": "Old Monk: Rumance Theory",
-    "language": "ml",
-    "releaseType": "OTT",
-    "platform": "Netflix",
-    "releaseDate": "2026-08-07",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/f9IokX0ARFDD6lvbpTC7UA6WR1i.jpg",
-    "genres": [
-      "Comedy"
-    ],
-    "synopsis": "After Jathin accidentally dirties Isha’s shoe, a small incident sets off a chain of events that unexpectedly affects both their lives. Without knowing what’s happening to each other, they slowly find themselves connected in ways they never expected.",
-    "rating": 0,
-    "status": "Released",
-    "certification": "U/A 13+",
-    "mediaType": "tv",
-    "trailerKey": "j_tBg92OJrU"
-  },
-  {
     "id": "332061",
     "title": "Prince of Mollywood",
     "language": "ml",
     "releaseType": "OTT",
     "platform": "Disney+ Hotstar",
     "releaseDate": "2026-09-11",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bOQC1qVZSmvPtHDZWo7i9NMhpIv.jpg",
-    "genres": [],
-    "synopsis": "No synopsis available.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/82TCOlAlhhuTkMclDTDR4bo6lQI.jpg",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "synopsis": "Firoz has one dream: become a Pan-Indian superstar. But everyone around him has other plans. His friends are experts at ruining things. Vappa Mammali turns producer hoping one flop will send him straight back to the family business. Umma is busy finding him a bride on matrimony sites. And then there's his girlfriend.",
     "rating": 0,
-    "status": "Upcoming",
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "tv",
+    "trailerKey": "iqt1LS57AcM"
+  },
+  {
+    "id": "332989",
+    "title": "Kerala Underground",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "JioCinema",
+    "releaseDate": "2026-08-28",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/riUSvenRSoqlva4PgidMXZZqIsl.jpg",
+    "genres": [],
+    "synopsis": "Kerala Underground is a first-of-its-kind Malayalam hip-hop reality series that explores the voices, stories, and culture shaping Kerala's rapidly growing rap movement.",
+    "rating": 0,
+    "status": "Released",
     "certification": "U/A",
     "mediaType": "tv",
-    "trailerKey": "iKNslzaNUi0"
+    "trailerKey": "kzuR0af0QBA"
   }
 ]
