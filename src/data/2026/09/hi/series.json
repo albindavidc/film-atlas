@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mock-tv-hi-1789455102670",
+    "title": "Mirzapur Season 09",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-20",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Action",
+      "Romance"
+    ],
+    "synopsis": "A highly anticipated upcoming hi tv releasing in month 09 2026.",
+    "rating": 8.82966490024582,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-tv-hi-1789455102671",
+    "title": "Mirzapur Season 09",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Prime Video",
+    "releaseDate": "2026-09-20",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Comedy"
+    ],
+    "synopsis": "A highly anticipated upcoming hi tv releasing in month 09 2026.",
+    "rating": 9.100218794887663,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

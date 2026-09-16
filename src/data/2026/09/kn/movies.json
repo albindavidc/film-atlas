@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mock-movie-kn-1789455102670",
+    "title": "KGF Chapter 09",
+    "language": "kn",
+    "releaseType": "OTT",
+    "platform": "ZEE5",
+    "releaseDate": "2026-09-03",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama",
+      "Drama"
+    ],
+    "synopsis": "A highly anticipated upcoming kn movie releasing in month 09 2026.",
+    "rating": 9.02472430789989,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-kn-1789455102671",
+    "title": "KGF Chapter 09",
+    "language": "kn",
+    "releaseType": "In Theaters",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-05",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Romance"
+    ],
+    "synopsis": "A highly anticipated upcoming kn movie releasing in month 09 2026.",
+    "rating": 8.995226623094284,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

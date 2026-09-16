@@ -1,0 +1,97 @@
+[
+  {
+    "id": "1465943",
+    "title": "Mandaadi",
+    "language": "ta",
+    "releaseType": "In Theaters",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-10",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cDFW9BI1PSqrBWu8W0ZoeUQivEM.jpg",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "synopsis": "A fishing captain applies his maritime knowledge in a traditional boat race along Tamil Nadu's coast during a festival, leading a six-person team against other crews.",
+    "rating": 9,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "VOHaf-0DV-U"
+  },
+  {
+    "id": "1538457",
+    "title": "Meesaya Murukku 2",
+    "language": "ta",
+    "releaseType": "In Theaters",
+    "platform": "ZEE5",
+    "releaseDate": "2026-09-25",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qD1QwmInB9ezd2peVb5EbhaM4Mo.jpg",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "synopsis": "No synopsis available.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A",
+    "mediaType": "movie"
+  },
+  {
+    "id": "1317872",
+    "title": "Sardar 2",
+    "language": "ta",
+    "releaseType": "In Theaters",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-10",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/muGsRtsNrG1gnlF2fPYrBa4TGlr.jpg",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "synopsis": "When the mysterious Black Dagger threatens national security, Inspector Vijay embarks on his most dangerous mission yet. As the battle unfolds, the extraordinary origin of legendary spy Sardar is finally revealed, uncovering the sacrifices that forged a legend and the secrets that could shape the future.",
+    "rating": 4,
+    "status": "Released",
+    "certification": "UA",
+    "mediaType": "movie",
+    "trailerKey": "jpvb4l2RIXU"
+  },
+  {
+    "id": "mock-movie-ta-1789455102669",
+    "title": "Vikram 09",
+    "language": "ta",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-09-19",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming ta movie releasing in month 09 2026.",
+    "rating": 8.54545064858456,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-ta-1789455102670",
+    "title": "Vikram 09",
+    "language": "ta",
+    "releaseType": "In Theaters",
+    "platform": "Prime Video",
+    "releaseDate": "2026-09-14",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Action",
+      "Romance"
+    ],
+    "synopsis": "A highly anticipated upcoming ta movie releasing in month 09 2026.",
+    "rating": 9.155056890032567,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

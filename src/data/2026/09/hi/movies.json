@@ -1,0 +1,119 @@
+[
+  {
+    "id": "1355228",
+    "title": "Gandhari",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-09-03",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aF3IhwS1mrVfvM9OMXmTaXAT0l8.jpg",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "synopsis": "When a mother loses her eyesight and her daughter in a kidnapping, she takes matters into her own hands to hunt down those responsible.",
+    "rating": 5.4,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "movie",
+    "trailerKey": "TRyBiPD1bUc"
+  },
+  {
+    "id": "1378537",
+    "title": "Mirzapur: The Movie",
+    "language": "hi",
+    "releaseType": "In Theaters",
+    "platform": "JioCinema",
+    "releaseDate": "2026-09-03",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cdDKdCRyq6BYuNblpKUYqRPWvEg.jpg",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "synopsis": "The battle for Mirzapur’s throne intensifies as old enemies resurface and a new threat emerges in the form of Babban Babua, a ruthless businessman from Jaisalmer with ambitions of his own. As the Tripathis face enemies from both the past and present, loyalties are tested while Guddu and Bablu Pandit fight to establish themselves in the power struggle for Mirzapur.",
+    "rating": 6.9,
+    "status": "Released",
+    "certification": "A",
+    "mediaType": "movie",
+    "trailerKey": "5vMWZhHPlaw"
+  },
+  {
+    "id": "1384514",
+    "title": "The Vvaan",
+    "language": "hi",
+    "releaseType": "In Theaters",
+    "platform": "Aha",
+    "releaseDate": "2026-09-25",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4zj0EEHQrfNtPEnASlqCLNyeQa7.jpg",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "synopsis": "A rational urban man defies his ancestral forbidden forest & awakens a divine goddess, only to realise that some powers exist beyond logic & he must rise as the village’s only saviour to protect his people from annihilation.",
+    "rating": 0,
+    "status": "Upcoming",
+    "certification": "U/A",
+    "mediaType": "movie"
+  },
+  {
+    "id": "1475799",
+    "title": "Haiwaan",
+    "language": "hi",
+    "releaseType": "In Theaters",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-11",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ykXYDPPvoPhTaBeQ90OibCaCOWX.jpg",
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "synopsis": "A retired judge faces difficulty keeping his daughter safe from a convict he imprisoned. Later, when he gets murdered, a man with visual impairment who was loyal to him tries to defend his daughter.",
+    "rating": 0,
+    "status": "Released",
+    "certification": "U/A 16+",
+    "mediaType": "movie",
+    "trailerKey": "Bm5S7ZKk6K8"
+  },
+  {
+    "id": "mock-movie-hi-1789455102667",
+    "title": "Singham Returns 09",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-25",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Romance",
+      "Action"
+    ],
+    "synopsis": "A highly anticipated upcoming hi movie releasing in month 09 2026.",
+    "rating": 8.810158210615905,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-hi-1789455102669",
+    "title": "Singham Returns 09",
+    "language": "hi",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-09-07",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming hi movie releasing in month 09 2026.",
+    "rating": 9.348095138427533,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

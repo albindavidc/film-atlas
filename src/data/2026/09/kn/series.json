@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mock-tv-kn-1789455102672",
+    "title": "Kavaludaari The Series 09",
+    "language": "kn",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-09-11",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming kn tv releasing in month 09 2026.",
+    "rating": 9.146459418909394,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-tv-kn-1789455102673",
+    "title": "Kavaludaari The Series 09",
+    "language": "kn",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-09-17",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "synopsis": "A highly anticipated upcoming kn tv releasing in month 09 2026.",
+    "rating": 8.838512539369196,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

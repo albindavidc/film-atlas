@@ -4,7 +4,7 @@ import { LanguageCode, ReleaseType, Platform, LANGUAGE_MAP, Movie } from './type
 import { Menu, X, Loader2, Calendar, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-type TimeView = 'Current Month' | 'Upcoming' | 'Custom';
+type TimeView = 'Released' | 'Upcoming' | 'Custom';
 type SortOption = 'date-desc' | 'date-asc' | 'alpha' | 'rating';
 
 const getInitialDates = () => {
@@ -29,7 +29,7 @@ import { fetchMovies } from './lib/api';
 export default function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [activeTab, setActiveTab] = useState<ReleaseType>('In Theaters');
-  const [timeView, setTimeView] = useState<TimeView>('Current Month');
+  const [timeView, setTimeView] = useState<TimeView>('Released');
   
   const [selectedLanguages, setSelectedLanguages] = useState<Set<LanguageCode>>(
     new Set(Object.keys(LANGUAGE_MAP) as LanguageCode[])
@@ -114,7 +114,7 @@ export default function App() {
       const releaseDate = new Date(year, month - 1, day);
 
       // 3. Filter by Time View
-      if (timeView === 'Current Month') {
+      if (timeView === 'Released') {
         if (movie.status !== 'Released') return false;
         // Current calendar month
         if (releaseDate < currentMonthStart || releaseDate > currentMonthEnd) return false;
@@ -285,7 +285,7 @@ export default function App() {
           <div className="flex items-center justify-between mb-3">
             <label className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Release Window</label>
             {timeView === 'Custom' && (
-              <button onClick={() => { setTimeView('Current Month'); setStartDate(INITIAL_DATES.start); setEndDate(INITIAL_DATES.end); }} className="text-[9px] text-indigo-400 hover:text-indigo-300 uppercase tracking-wider font-bold transition-colors">Reset</button>
+              <button onClick={() => { setTimeView('Released'); setStartDate(INITIAL_DATES.start); setEndDate(INITIAL_DATES.end); }} className="text-[9px] text-indigo-400 hover:text-indigo-300 uppercase tracking-wider font-bold transition-colors">Reset</button>
             )}
           </div>
           
@@ -370,12 +370,12 @@ export default function App() {
 
             {/* Sub-tabs */}
             <div className="flex bg-white/5 p-1 rounded-lg border border-white/10 shrink-0">
-              {(['Current Month', 'Upcoming', 'Custom'] as TimeView[]).map(view => (
+              {(['Released', 'Upcoming', 'Custom'] as TimeView[]).map(view => (
                 <button
                   key={view}
                   onClick={() => {
                     setTimeView(view);
-                    if (view === 'Current Month') {
+                    if (view === 'Released') {
                       setStartDate(INITIAL_DATES.start);
                       setEndDate(INITIAL_DATES.end);
                     }

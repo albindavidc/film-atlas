@@ -20,6 +20,17 @@ export async function fetchMovies(): Promise<Movie[]> {
       for (const item of data) {
         if (!seenIds.has(item.id)) {
           seenIds.add(item.id);
+
+          // Dynamically evaluate status based on today's date
+          const [year, month, day] = item.releaseDate.split('-').map(Number);
+          const rDate = new Date(year, month - 1, day);
+          rDate.setHours(0, 0, 0, 0);
+          
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+
+          item.status = rDate <= today ? 'Released' : 'Upcoming';
+
           allMovies.push(item);
         }
       }

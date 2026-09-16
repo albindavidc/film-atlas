@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mock-tv-ml-1789455102671",
+    "title": "Kerala Crime Files 09",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "Aha",
+    "releaseDate": "2026-09-08",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "synopsis": "A highly anticipated upcoming ml tv releasing in month 09 2026.",
+    "rating": 9.20474659493882,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-tv-ml-1789455102672",
+    "title": "Kerala Crime Files 09",
+    "language": "ml",
+    "releaseType": "OTT",
+    "platform": "ZEE5",
+    "releaseDate": "2026-09-12",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "synopsis": "A highly anticipated upcoming ml tv releasing in month 09 2026.",
+    "rating": 9.046312837718006,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

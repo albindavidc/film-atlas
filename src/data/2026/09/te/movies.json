@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mock-movie-te-1789455102670",
+    "title": "Pushpa 09",
+    "language": "te",
+    "releaseType": "OTT",
+    "platform": "Netflix",
+    "releaseDate": "2026-09-21",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "synopsis": "A highly anticipated upcoming te movie releasing in month 09 2026.",
+    "rating": 8.811606237566314,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-movie-te-1789455102671",
+    "title": "Pushpa 09",
+    "language": "te",
+    "releaseType": "OTT",
+    "platform": "ZEE5",
+    "releaseDate": "2026-09-13",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "synopsis": "A highly anticipated upcoming te movie releasing in month 09 2026.",
+    "rating": 9.410708720816118,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "movie",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]

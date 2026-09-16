@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mock-tv-en-1789455102674",
+    "title": "Stranger Things 09",
+    "language": "en",
+    "releaseType": "OTT",
+    "platform": "SonyLIV",
+    "releaseDate": "2026-09-06",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Thriller",
+      "Thriller"
+    ],
+    "synopsis": "A highly anticipated upcoming en tv releasing in month 09 2026.",
+    "rating": 8.676012543132895,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "mock-tv-en-1789455102675",
+    "title": "Stranger Things 09",
+    "language": "en",
+    "releaseType": "OTT",
+    "platform": "Disney+ Hotstar",
+    "releaseDate": "2026-09-19",
+    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400&h=600",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "synopsis": "A highly anticipated upcoming en tv releasing in month 09 2026.",
+    "rating": 9.478184290579529,
+    "status": "Released",
+    "certification": "U/A",
+    "mediaType": "tv",
+    "trailerKey": "dQw4w9WgXcQ"
+  }
+]
